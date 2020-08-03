@@ -1,1 +1,1 @@
-web: gunicorn predict_car_price:app
+web: gunicorn Car_price_predict:app
