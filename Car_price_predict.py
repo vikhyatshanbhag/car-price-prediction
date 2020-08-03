@@ -38,7 +38,7 @@ def predict_car_price():
     f1,f2,f3,f4=tuple(fuel_dict.values())
     s1,s2=tuple(seller_dict.values())
     o1,o2,o3,o4=tuple(owner_dict.values())
-    load_model=joblib.load(open("F:/Carprice/car_price_pred_final_model.pkl",'rb'))
+    load_model=joblib.load(open("car_price_pred_final_model.pkl",'rb'))
     result=str(round(load_model.predict([[km,yr,f1,f2,f3,f4,s1,s2,man,o1,o2,o3,o4]])[0],2))
     return render_template('predict_car_price.html', price='{} lakhs '.format(result))
         
