@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<title>Car Price Prediction Model</title>
+<style>
+form{
+position:absolute;
+left:30%;
+width:400px;
+height:630px;
+background:skyblue;
+border:1px solid black;
+text-align:center;
+opacity:0.8;
+}
+
+</style>
+</head>
+<body style="background:yellow;">
+<form class="container" action="http://127.0.0.1:5000/predict_car_price" method="POST">
+<h3>KM Driven</h3>
+<input type="text" placeholder="Enter kilometer" name='one'/>
+
+<h3>Car model year</h3>
+<input type="text" placeholder="Enter Car model year" name='two'/>
+
+<h3>Fuel type</h3>
+<select name='three' required>
+		<option value="Petrol">Petrol</option>
+        <option value="Diesel">Diesel</option>
+        <option value="CNG">CNG</option>
+		<option value="LPG">LPG</option>
+        <option value="Electric">Electric</option>
+	</select><br>
+	
+<h3>Seller Type</h3>
+<select name="four" required>
+		<option value="Individual">Individual</option>
+        <option value="Dealer">Dealer</option>
+        <option value="Trustmark Dealer">Trustmark Dealer</option>
+	</select><br>
+	
+<h3>Transmission Type</h3>
+<select name="five" required>
+		<option value="Manual">Manual</option>
+        <option value="Automatic">Automatic</option>
+	</select><br>
+	
+<h3>Owner Type</h3>
+<select name="six" required>
+		<option value="First Owner">First Owner</option>
+        <option value="Second Owner">Second Owner</option>
+        <option value="Fourth & Above Owner">Fourth & Above Owner</option>
+		<option value="Third Owne">Third Owner</option>
+        <option value="Test Drive Car">Test Drive Car</option>
+	</select><br>
+	<br>
+<input type="submit" value="Predict car price"> 
+<h2>Predicted price of car is: {{price}}</h2>
+</form>
+</div>
+</body>
+</html>
